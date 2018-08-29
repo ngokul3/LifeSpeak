@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F4564999B1E621B6E38DFF8 /* Pods_LifeSpeak_YoutubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822A0177F938A3AED2FB5900 /* Pods_LifeSpeak_YoutubeUITests.framework */; };
+		3E4733BBC99B37D39EFE3A0A /* Pods_LifeSpeak_YoutubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDD7493BA78D3F9953A93BA /* Pods_LifeSpeak_YoutubeTests.framework */; };
+		8C66992349E9B01889A8BEB1 /* Pods_LifeSpeak_Youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021BBE59B2F9BBEB0361EE93 /* Pods_LifeSpeak_Youtube.framework */; };
+		909AED0E21361058003B1102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED0D21361058003B1102 /* AppDelegate.swift */; };
+		909AED1321361058003B1102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909AED1121361058003B1102 /* Main.storyboard */; };
+		909AED152136105A003B1102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909AED142136105A003B1102 /* Assets.xcassets */; };
+		909AED182136105A003B1102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909AED162136105A003B1102 /* LaunchScreen.storyboard */; };
+		909AED232136105A003B1102 /* LifeSpeak_YoutubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED222136105A003B1102 /* LifeSpeak_YoutubeTests.swift */; };
+		909AED2E2136105A003B1102 /* LifeSpeak_YoutubeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED2D2136105A003B1102 /* LifeSpeak_YoutubeUITests.swift */; };
+		909AED3F213611E6003B1102 /* VideoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED3E213611E6003B1102 /* VideoContent.swift */; };
+		909AED42213612E6003B1102 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED41213612E6003B1102 /* NetworkLayer.swift */; };
+		909AED45213615AC003B1102 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED44213615AC003B1102 /* Types.swift */; };
+		909AED4921361834003B1102 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED4821361834003B1102 /* MasterVC.swift */; };
+		909AED4B2136DB9F003B1102 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED4A2136DB9F003B1102 /* VideoCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		909AED1F2136105A003B1102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909AED0221361058003B1102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 909AED0921361058003B1102;
+			remoteInfo = LifeSpeak_Youtube;
+		};
+		909AED2A2136105A003B1102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909AED0221361058003B1102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 909AED0921361058003B1102;
+			remoteInfo = LifeSpeak_Youtube;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		021BBE59B2F9BBEB0361EE93 /* Pods_LifeSpeak_Youtube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSpeak_Youtube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1993CAF47A1823968728A548 /* Pods-LifeSpeak_Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSpeak_Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSpeak_Youtube/Pods-LifeSpeak_Youtube.release.xcconfig"; sourceTree = "<group>"; };
+		1FB170AA8C40439B54C7685C /* Pods-LifeSpeak_YoutubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSpeak_YoutubeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSpeak_YoutubeTests/Pods-LifeSpeak_YoutubeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EF2875467D80475902FDE50 /* Pods-LifeSpeak_YoutubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSpeak_YoutubeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSpeak_YoutubeUITests/Pods-LifeSpeak_YoutubeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		530A38CE6A09E1F9458F9BFF /* Pods-LifeSpeak_YoutubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSpeak_YoutubeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSpeak_YoutubeTests/Pods-LifeSpeak_YoutubeTests.release.xcconfig"; sourceTree = "<group>"; };
+		53F83FF1DF674FFBDB339833 /* Pods-LifeSpeak_Youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSpeak_Youtube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSpeak_Youtube/Pods-LifeSpeak_Youtube.debug.xcconfig"; sourceTree = "<group>"; };
+		822A0177F938A3AED2FB5900 /* Pods_LifeSpeak_YoutubeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSpeak_YoutubeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84759FECA71CD4030A851999 /* Pods-LifeSpeak_YoutubeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeSpeak_YoutubeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeSpeak_YoutubeUITests/Pods-LifeSpeak_YoutubeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		909AED0A21361058003B1102 /* LifeSpeak_Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeSpeak_Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		909AED0D21361058003B1102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		909AED1221361058003B1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		909AED142136105A003B1102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		909AED172136105A003B1102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		909AED192136105A003B1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909AED1E2136105A003B1102 /* LifeSpeak_YoutubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeSpeak_YoutubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		909AED222136105A003B1102 /* LifeSpeak_YoutubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSpeak_YoutubeTests.swift; sourceTree = "<group>"; };
+		909AED242136105A003B1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909AED292136105A003B1102 /* LifeSpeak_YoutubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeSpeak_YoutubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		909AED2D2136105A003B1102 /* LifeSpeak_YoutubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeSpeak_YoutubeUITests.swift; sourceTree = "<group>"; };
+		909AED2F2136105A003B1102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909AED3E213611E6003B1102 /* VideoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContent.swift; sourceTree = "<group>"; };
+		909AED41213612E6003B1102 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		909AED44213615AC003B1102 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		909AED4821361834003B1102 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
+		909AED4A2136DB9F003B1102 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		FCDD7493BA78D3F9953A93BA /* Pods_LifeSpeak_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSpeak_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		909AED0721361058003B1102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C66992349E9B01889A8BEB1 /* Pods_LifeSpeak_Youtube.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909AED1B2136105A003B1102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4733BBC99B37D39EFE3A0A /* Pods_LifeSpeak_YoutubeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909AED262136105A003B1102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4564999B1E621B6E38DFF8 /* Pods_LifeSpeak_YoutubeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B4B843290EBDB7664337B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53F83FF1DF674FFBDB339833 /* Pods-LifeSpeak_Youtube.debug.xcconfig */,
+				1993CAF47A1823968728A548 /* Pods-LifeSpeak_Youtube.release.xcconfig */,
+				1FB170AA8C40439B54C7685C /* Pods-LifeSpeak_YoutubeTests.debug.xcconfig */,
+				530A38CE6A09E1F9458F9BFF /* Pods-LifeSpeak_YoutubeTests.release.xcconfig */,
+				84759FECA71CD4030A851999 /* Pods-LifeSpeak_YoutubeUITests.debug.xcconfig */,
+				2EF2875467D80475902FDE50 /* Pods-LifeSpeak_YoutubeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82D563059FD53A9A0C48C983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				021BBE59B2F9BBEB0361EE93 /* Pods_LifeSpeak_Youtube.framework */,
+				FCDD7493BA78D3F9953A93BA /* Pods_LifeSpeak_YoutubeTests.framework */,
+				822A0177F938A3AED2FB5900 /* Pods_LifeSpeak_YoutubeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		909AED0121361058003B1102 = {
+			isa = PBXGroup;
+			children = (
+				909AED0C21361058003B1102 /* LifeSpeak_Youtube */,
+				909AED212136105A003B1102 /* LifeSpeak_YoutubeTests */,
+				909AED2C2136105A003B1102 /* LifeSpeak_YoutubeUITests */,
+				909AED0B21361058003B1102 /* Products */,
+				00B4B843290EBDB7664337B8 /* Pods */,
+				82D563059FD53A9A0C48C983 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		909AED0B21361058003B1102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				909AED0A21361058003B1102 /* LifeSpeak_Youtube.app */,
+				909AED1E2136105A003B1102 /* LifeSpeak_YoutubeTests.xctest */,
+				909AED292136105A003B1102 /* LifeSpeak_YoutubeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		909AED0C21361058003B1102 /* LifeSpeak_Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				909AED432136159B003B1102 /* Utils */,
+				909AED402136124A003B1102 /* Network */,
+				909AED3D21361184003B1102 /* Cell */,
+				909AED3C2136117F003B1102 /* Model */,
+				909AED3B21361178003B1102 /* Controller */,
+				909AED0D21361058003B1102 /* AppDelegate.swift */,
+				909AED1121361058003B1102 /* Main.storyboard */,
+				909AED142136105A003B1102 /* Assets.xcassets */,
+				909AED162136105A003B1102 /* LaunchScreen.storyboard */,
+				909AED192136105A003B1102 /* Info.plist */,
+			);
+			path = LifeSpeak_Youtube;
+			sourceTree = "<group>";
+		};
+		909AED212136105A003B1102 /* LifeSpeak_YoutubeTests */ = {
+			isa = PBXGroup;
+			children = (
+				909AED222136105A003B1102 /* LifeSpeak_YoutubeTests.swift */,
+				909AED242136105A003B1102 /* Info.plist */,
+			);
+			path = LifeSpeak_YoutubeTests;
+			sourceTree = "<group>";
+		};
+		909AED2C2136105A003B1102 /* LifeSpeak_YoutubeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				909AED2D2136105A003B1102 /* LifeSpeak_YoutubeUITests.swift */,
+				909AED2F2136105A003B1102 /* Info.plist */,
+			);
+			path = LifeSpeak_YoutubeUITests;
+			sourceTree = "<group>";
+		};
+		909AED3B21361178003B1102 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				909AED4821361834003B1102 /* MasterVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		909AED3C2136117F003B1102 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				909AED3E213611E6003B1102 /* VideoContent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		909AED3D21361184003B1102 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				909AED4A2136DB9F003B1102 /* VideoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		909AED402136124A003B1102 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				909AED41213612E6003B1102 /* NetworkLayer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		909AED432136159B003B1102 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				909AED44213615AC003B1102 /* Types.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		909AED0921361058003B1102 /* LifeSpeak_Youtube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909AED322136105A003B1102 /* Build configuration list for PBXNativeTarget "LifeSpeak_Youtube" */;
+			buildPhases = (
+				793EBD556334C12B5EB05496 /* [CP] Check Pods Manifest.lock */,
+				909AED0621361058003B1102 /* Sources */,
+				909AED0721361058003B1102 /* Frameworks */,
+				909AED0821361058003B1102 /* Resources */,
+				DFF9019C05815CCB7432B871 /* [CP] Embed Pods Frameworks */,
+				FD4EDBB3F1332EB05769F1C2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeSpeak_Youtube;
+			productName = LifeSpeak_Youtube;
+			productReference = 909AED0A21361058003B1102 /* LifeSpeak_Youtube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		909AED1D2136105A003B1102 /* LifeSpeak_YoutubeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909AED352136105A003B1102 /* Build configuration list for PBXNativeTarget "LifeSpeak_YoutubeTests" */;
+			buildPhases = (
+				F1A7C66FDAF2C995207C216E /* [CP] Check Pods Manifest.lock */,
+				909AED1A2136105A003B1102 /* Sources */,
+				909AED1B2136105A003B1102 /* Frameworks */,
+				909AED1C2136105A003B1102 /* Resources */,
+				AB5F1897A7B138B53A708DEE /* [CP] Embed Pods Frameworks */,
+				CBCFFE888CEF7467A3A2AB26 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909AED202136105A003B1102 /* PBXTargetDependency */,
+			);
+			name = LifeSpeak_YoutubeTests;
+			productName = LifeSpeak_YoutubeTests;
+			productReference = 909AED1E2136105A003B1102 /* LifeSpeak_YoutubeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		909AED282136105A003B1102 /* LifeSpeak_YoutubeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909AED382136105A003B1102 /* Build configuration list for PBXNativeTarget "LifeSpeak_YoutubeUITests" */;
+			buildPhases = (
+				CA7C93F83F23908FD251A4D5 /* [CP] Check Pods Manifest.lock */,
+				909AED252136105A003B1102 /* Sources */,
+				909AED262136105A003B1102 /* Frameworks */,
+				909AED272136105A003B1102 /* Resources */,
+				15E5F1C437E3DBED769CD2A2 /* [CP] Embed Pods Frameworks */,
+				D2BB9FC0CE7AA0F21C9F120A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909AED2B2136105A003B1102 /* PBXTargetDependency */,
+			);
+			name = LifeSpeak_YoutubeUITests;
+			productName = LifeSpeak_YoutubeUITests;
+			productReference = 909AED292136105A003B1102 /* LifeSpeak_YoutubeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		909AED0221361058003B1102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Gokul K Narasimhan";
+				TargetAttributes = {
+					909AED0921361058003B1102 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					909AED1D2136105A003B1102 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 909AED0921361058003B1102;
+					};
+					909AED282136105A003B1102 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 909AED0921361058003B1102;
+					};
+				};
+			};
+			buildConfigurationList = 909AED0521361058003B1102 /* Build configuration list for PBXProject "LifeSpeak_Youtube" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 909AED0121361058003B1102;
+			productRefGroup = 909AED0B21361058003B1102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				909AED0921361058003B1102 /* LifeSpeak_Youtube */,
+				909AED1D2136105A003B1102 /* LifeSpeak_YoutubeTests */,
+				909AED282136105A003B1102 /* LifeSpeak_YoutubeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		909AED0821361058003B1102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909AED182136105A003B1102 /* LaunchScreen.storyboard in Resources */,
+				909AED152136105A003B1102 /* Assets.xcassets in Resources */,
+				909AED1321361058003B1102 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909AED1C2136105A003B1102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909AED272136105A003B1102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15E5F1C437E3DBED769CD2A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_YoutubeUITests/Pods-LifeSpeak_YoutubeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		793EBD556334C12B5EB05496 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSpeak_Youtube-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB5F1897A7B138B53A708DEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_YoutubeTests/Pods-LifeSpeak_YoutubeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA7C93F83F23908FD251A4D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSpeak_YoutubeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBCFFE888CEF7467A3A2AB26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_YoutubeTests/Pods-LifeSpeak_YoutubeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2BB9FC0CE7AA0F21C9F120A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_YoutubeUITests/Pods-LifeSpeak_YoutubeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFF9019C05815CCB7432B871 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_Youtube/Pods-LifeSpeak_Youtube-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_Youtube/Pods-LifeSpeak_Youtube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1A7C66FDAF2C995207C216E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LifeSpeak_YoutubeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4EDBB3F1332EB05769F1C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LifeSpeak_Youtube/Pods-LifeSpeak_Youtube-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		909AED0621361058003B1102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909AED42213612E6003B1102 /* NetworkLayer.swift in Sources */,
+				909AED4921361834003B1102 /* MasterVC.swift in Sources */,
+				909AED0E21361058003B1102 /* AppDelegate.swift in Sources */,
+				909AED3F213611E6003B1102 /* VideoContent.swift in Sources */,
+				909AED45213615AC003B1102 /* Types.swift in Sources */,
+				909AED4B2136DB9F003B1102 /* VideoCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909AED1A2136105A003B1102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909AED232136105A003B1102 /* LifeSpeak_YoutubeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909AED252136105A003B1102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909AED2E2136105A003B1102 /* LifeSpeak_YoutubeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		909AED202136105A003B1102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 909AED0921361058003B1102 /* LifeSpeak_Youtube */;
+			targetProxy = 909AED1F2136105A003B1102 /* PBXContainerItemProxy */;
+		};
+		909AED2B2136105A003B1102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 909AED0921361058003B1102 /* LifeSpeak_Youtube */;
+			targetProxy = 909AED2A2136105A003B1102 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		909AED1121361058003B1102 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				909AED1221361058003B1102 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		909AED162136105A003B1102 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				909AED172136105A003B1102 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		909AED302136105A003B1102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		909AED312136105A003B1102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		909AED332136105A003B1102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53F83FF1DF674FFBDB339833 /* Pods-LifeSpeak_Youtube.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTEDH52U6R;
+				INFOPLIST_FILE = LifeSpeak_Youtube/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gokul-K-Narasimhan.LifeSpeak-Youtube";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		909AED342136105A003B1102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1993CAF47A1823968728A548 /* Pods-LifeSpeak_Youtube.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTEDH52U6R;
+				INFOPLIST_FILE = LifeSpeak_Youtube/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gokul-K-Narasimhan.LifeSpeak-Youtube";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		909AED362136105A003B1102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB170AA8C40439B54C7685C /* Pods-LifeSpeak_YoutubeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTEDH52U6R;
+				INFOPLIST_FILE = LifeSpeak_YoutubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gokul-K-Narasimhan.LifeSpeak-YoutubeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeSpeak_Youtube.app/LifeSpeak_Youtube";
+			};
+			name = Debug;
+		};
+		909AED372136105A003B1102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 530A38CE6A09E1F9458F9BFF /* Pods-LifeSpeak_YoutubeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTEDH52U6R;
+				INFOPLIST_FILE = LifeSpeak_YoutubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gokul-K-Narasimhan.LifeSpeak-YoutubeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeSpeak_Youtube.app/LifeSpeak_Youtube";
+			};
+			name = Release;
+		};
+		909AED392136105A003B1102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84759FECA71CD4030A851999 /* Pods-LifeSpeak_YoutubeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTEDH52U6R;
+				INFOPLIST_FILE = LifeSpeak_YoutubeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gokul-K-Narasimhan.LifeSpeak-YoutubeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LifeSpeak_Youtube;
+			};
+			name = Debug;
+		};
+		909AED3A2136105A003B1102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EF2875467D80475902FDE50 /* Pods-LifeSpeak_YoutubeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RTEDH52U6R;
+				INFOPLIST_FILE = LifeSpeak_YoutubeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Gokul-K-Narasimhan.LifeSpeak-YoutubeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LifeSpeak_Youtube;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		909AED0521361058003B1102 /* Build configuration list for PBXProject "LifeSpeak_Youtube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909AED302136105A003B1102 /* Debug */,
+				909AED312136105A003B1102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909AED322136105A003B1102 /* Build configuration list for PBXNativeTarget "LifeSpeak_Youtube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909AED332136105A003B1102 /* Debug */,
+				909AED342136105A003B1102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909AED352136105A003B1102 /* Build configuration list for PBXNativeTarget "LifeSpeak_YoutubeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909AED362136105A003B1102 /* Debug */,
+				909AED372136105A003B1102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909AED382136105A003B1102 /* Build configuration list for PBXNativeTarget "LifeSpeak_YoutubeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909AED392136105A003B1102 /* Debug */,
+				909AED3A2136105A003B1102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 909AED0221361058003B1102 /* Project object */;
+}
