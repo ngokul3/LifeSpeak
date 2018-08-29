@@ -46,6 +46,7 @@ extension VideoContentManager{
                 let video = VideoContent()
                 video.title = content["title"].text
                 video.id = content["id"].text
+                video.videoURL = content["link"].attributes["href"]
                 self?.videoContents.append(video)
             }
             

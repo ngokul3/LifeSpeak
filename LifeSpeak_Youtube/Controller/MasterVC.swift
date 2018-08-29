@@ -61,7 +61,51 @@ extension MasterVC : UITableViewDataSource{
 }
 
 extension MasterVC{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        guard let identifier = segue.identifier else{
+            preconditionFailure("No segue identifier")
+        }
+        
+        let segueToVC = segue.destination as? DetailVC
+        
+        //switch not really needed as we have only 1 segue
+        
+        switch identifier{
+        case "detailIdentifier" :
+            let selectedIndex = tableView.indexPath(for: sender as! UITableViewCell)
+            let selectedRow = selectedIndex?.row ?? 0
+            
+            do{
+                let video = try videoManager.getVideo(fromVideoArray: selectedRow)
+                segueToVC?.videoURLOpt = video.videoURL
+            }
+            catch{
+                alertUser = "Video not available"
+            }
+            
+            
+        default:  break
+        }
+    }
+}
+extension MasterVC{
     func updateUI(){
         self.tableView.reloadData()
+    }
+}
+
+extension MasterVC{
+    
+    var alertUser :  String{
+        get{
+            preconditionFailure("You cannot read from this object")
+        }
+        set{
+            let alert = UIAlertController(title: "Attention", message: newValue, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+        }
     }
 }

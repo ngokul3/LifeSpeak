@@ -40,7 +40,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="title" destination="TVD-tl-8Fn" id="cTU-75-Ksn"/>
-                                            <segue destination="Fub-jE-fuO" kind="show" id="ALv-NP-TPw"/>
+                                            <segue destination="Fub-jE-fuO" kind="show" identifier="detailIdentifier" id="ALv-NP-TPw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
