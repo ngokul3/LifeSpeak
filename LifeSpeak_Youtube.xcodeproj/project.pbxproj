@@ -21,6 +21,7 @@
 		909AED45213615AC003B1102 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED44213615AC003B1102 /* Types.swift */; };
 		909AED4921361834003B1102 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED4821361834003B1102 /* MasterVC.swift */; };
 		909AED4B2136DB9F003B1102 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED4A2136DB9F003B1102 /* VideoCell.swift */; };
+		909AED4D213742E2003B1102 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909AED4C213742E2003B1102 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		909AED44213615AC003B1102 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		909AED4821361834003B1102 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		909AED4A2136DB9F003B1102 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		909AED4C213742E2003B1102 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		FCDD7493BA78D3F9953A93BA /* Pods_LifeSpeak_YoutubeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LifeSpeak_YoutubeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				909AED4821361834003B1102 /* MasterVC.swift */,
+				909AED4C213742E2003B1102 /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				909AED3F213611E6003B1102 /* VideoContent.swift in Sources */,
 				909AED45213615AC003B1102 /* Types.swift in Sources */,
 				909AED4B2136DB9F003B1102 /* VideoCell.swift in Sources */,
+				909AED4D213742E2003B1102 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

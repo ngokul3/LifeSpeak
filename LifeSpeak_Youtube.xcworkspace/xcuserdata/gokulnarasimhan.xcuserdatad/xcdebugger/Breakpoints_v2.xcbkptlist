@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Controller/MasterVC.swift"
-            timestampString = "557247748.492015"
+            timestampString = "557270583.586073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Network/NetworkLayer.swift"
-            timestampString = "557247748.492638"
+            timestampString = "557270583.586881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Network/NetworkLayer.swift"
-            timestampString = "557247748.493077"
+            timestampString = "557270583.586977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Network/NetworkLayer.swift"
-            timestampString = "557247748.4934289"
+            timestampString = "557270583.58705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Controller/MasterVC.swift"
-            timestampString = "557247748.493769"
+            timestampString = "557270583.5871249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -86,11 +86,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Controller/MasterVC.swift"
-            timestampString = "557247748.494095"
+            timestampString = "557270583.587639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -102,11 +102,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Controller/MasterVC.swift"
-            timestampString = "557247748.494406"
+            timestampString = "557270583.588138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
-            timestampString = "557247748.494715"
+            timestampString = "557270583.588629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
-            timestampString = "557247748.495346"
+            timestampString = "557270583.5887001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
-            timestampString = "557247748.496792"
+            timestampString = "557270583.588758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "loadVideos()"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
-            timestampString = "557247748.4975801"
+            timestampString = "557270583.588823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Controller/MasterVC.swift"
-            timestampString = "557247748.498556"
+            timestampString = "557270583.588899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
-            timestampString = "557247800.2093149"
+            timestampString = "557270583.589355"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -218,12 +218,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
-            timestampString = "557247801.230747"
+            timestampString = "557270583.589414"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "getVideoContentsCount()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LifeSpeak_Youtube/Model/VideoContent.swift"
+            timestampString = "557270583.589466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "loadVideos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LifeSpeak_Youtube/Controller/DetailVC.swift"
+            timestampString = "557270583.589525"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "backClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
