@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CED81A939632AF3FEDAFE75D4A522C93"
+               BlueprintIdentifier = "07838164B28F58FDD336688C6B453286"
                BuildableName = "Pods_LifeSpeak_Youtube.framework"
                BlueprintName = "Pods-LifeSpeak_Youtube"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CED81A939632AF3FEDAFE75D4A522C93"
+            BlueprintIdentifier = "07838164B28F58FDD336688C6B453286"
             BuildableName = "Pods_LifeSpeak_Youtube.framework"
             BlueprintName = "Pods-LifeSpeak_Youtube"
             ReferencedContainer = "container:Pods.xcodeproj">

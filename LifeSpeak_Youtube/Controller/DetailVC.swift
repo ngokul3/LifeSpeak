@@ -7,11 +7,14 @@
 //
 
 import UIKit
-import AVKit
+//import AVKit
+import YouTubePlayer_Swift
 
 class DetailVC: UIViewController {
 
+
     public var videoURLOpt: String?
+    @IBOutlet var videoPlayer: YouTubePlayerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,13 +26,14 @@ class DetailVC: UIViewController {
             preconditionFailure("Invalid URL")
         }
 
-        let player = AVPlayer(url: url)
-        let vc = AVPlayerViewController()
-        vc.player = player
-        
-        present(vc, animated: true) {
-            vc.player?.play()
-        }
+       videoPlayer.loadVideoURL(url)
+//        let player = AVPlayer(url: url)
+//        let vc = AVPlayerViewController()
+//        vc.player = player
+//
+//        present(vc, animated: true) {
+//            vc.player?.play()
+//        }
     }
 }
 

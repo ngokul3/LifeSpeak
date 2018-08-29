@@ -6,6 +6,7 @@ target 'LifeSpeak_Youtube' do
   use_frameworks!
 
 pod 'Alamofire', '4.7.1'
+pod 'YouTubePlayer-Swift', '~> 1.0'
 pod "SwiftyXMLParser", :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
   # Pods for LifeSpeak_Youtube
 

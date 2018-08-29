@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (4.7.1)
   - SwiftyXMLParser (4.1.0)
+  - YouTubePlayer-Swift (1.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.1)
   - SwiftyXMLParser (from `https://github.com/yahoojapan/SwiftyXMLParser.git`)
+  - YouTubePlayer-Swift (~> 1.0)
 
 EXTERNAL SOURCES:
   SwiftyXMLParser:
@@ -18,7 +20,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   SwiftyXMLParser: b5a79fb8a730903703d0a92d30752a0b05158967
+  YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: c9bc0f5f3ca52b355e18a79fc9c7aa62160ea858
+PODFILE CHECKSUM: 5874d5a339315b64a887bdd72667ffe4563d7562
 
 COCOAPODS: 1.4.0

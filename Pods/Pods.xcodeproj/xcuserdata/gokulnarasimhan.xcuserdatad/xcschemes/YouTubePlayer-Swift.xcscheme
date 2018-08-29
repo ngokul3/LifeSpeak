@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
-               BuildableName = "Alamofire.framework"
-               BlueprintName = "Alamofire"
+               BlueprintIdentifier = "75FBF4C9964D973DA2E63DCC470C8661"
+               BuildableName = "YouTubePlayer_Swift.framework"
+               BlueprintName = "YouTubePlayer-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
-            BuildableName = "Alamofire.framework"
-            BlueprintName = "Alamofire"
+            BlueprintIdentifier = "75FBF4C9964D973DA2E63DCC470C8661"
+            BuildableName = "YouTubePlayer_Swift.framework"
+            BlueprintName = "YouTubePlayer-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
