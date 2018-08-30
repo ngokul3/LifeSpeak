@@ -11,30 +11,45 @@ import UIKit
 import YouTubePlayer_Swift
 
 class DetailVC: UIViewController {
-
-
-    public var videoURLOpt: String?
+    
     @IBOutlet var videoPlayer: YouTubePlayerView!
+    @IBOutlet weak var videoTitle: UILabel!
+    
+    public var videoContentOpt: VideoContent?
+    public var videoFromIndexOpt : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let videoURL = videoURLOpt else{
+        playVideo()
+
+    }
+}
+
+extension DetailVC{
+    
+    private func playVideo(){
+        guard let videoContent = videoContentOpt else{
             preconditionFailure("There is no URL to play")
         }
         
-        guard let url = URL(string: videoURL) else{
+        
+        
+        guard let url = URL(string: videoContent.videoURL ?? "") //todo
+        
+        else{
             preconditionFailure("Invalid URL")
         }
-
-       videoPlayer.loadVideoURL(url)
-//        let player = AVPlayer(url: url)
-//        let vc = AVPlayerViewController()
-//        vc.player = player
-//
-//        present(vc, animated: true) {
-//            vc.player?.play()
-//        }
+        
+        videoTitle.text = videoContent.title
+        videoPlayer.loadVideoURL(url)
     }
+}
+
+extension DetailVC{
+    @IBAction func btnNextClick(_ sender: UIButton) {
+    }
+    @IBAction func btnPrevClick(_ sender: UIButton) {
+    }
+    
 }
 
 

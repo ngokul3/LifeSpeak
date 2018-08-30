@@ -13,6 +13,15 @@ protocol VideoContentManagerProtocol {
     func getVideoContentsCount()->Int
     func loadVideos()
 }
+
+protocol VideoNavigationDelegate{
+    func navigateToAnotherVideo(currentVideoIndex: Int, navigationMode: NavigationMode )
+}
+
+enum NavigationMode{
+    case next
+    case prev
+}
 struct Consts {
     static let YOUTUBEURL = "https://www.youtube.com/feeds/videos.xml?channel_id="
 }

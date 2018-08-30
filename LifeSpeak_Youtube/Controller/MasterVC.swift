@@ -78,12 +78,14 @@ extension MasterVC{
             
             do{
                 let video = try videoManager.getVideo(fromVideoArray: selectedRow)
-                segueToVC?.videoURLOpt = video.videoURL
+                segueToVC?.videoContentOpt = video
+//                segueToVC?.videoURLOpt = video.videoURL
+//                segueToVC?.videoTitle.text = video.title
+                segueToVC?.videoFromIndexOpt = selectedRow
             }
             catch{
                 alertUser = "Video not available"
             }
-            
             
         default:  break
         }
@@ -93,6 +95,31 @@ extension MasterVC{
     func updateUI(){
         self.tableView.reloadData()
     }
+}
+
+extension MasterVC: VideoNavigationDelegate{
+    func navigateToAnotherVideo(currentVideoIndex: Int, navigationMode: NavigationMode) {
+        
+        let totalVideoCount = videoManager.getVideoContentsCount()
+        switch navigationMode{
+        case .next:
+            if(currentVideoIndex == totalVideoCount - 1){
+                
+            }else{
+                //let video = try videoManager.getVideo(fromVideoArray: currentVideoIndex + 1)
+                
+            }
+        
+        case .prev:
+            if(currentVideoIndex == 0){
+                
+            }else{
+                
+            }
+        }
+    }
+    
+    
 }
 
 extension MasterVC{
