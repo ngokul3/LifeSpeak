@@ -7,11 +7,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MasterVC-->
+        <!--LifeSpeak Video List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MasterVC" customModule="LifeSpeak_Youtube" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,24 +24,43 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="videoCell" id="CPE-UD-DKe" customClass="VideoCell" customModule="LifeSpeak_Youtube" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="videoCell" rowHeight="90" id="CPE-UD-DKe" customClass="VideoCell" customModule="LifeSpeak_Youtube" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CPE-UD-DKe" id="I9o-8P-IYB">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVD-tl-8Fn">
-                                                    <rect key="frame" x="15" y="0.0" width="334" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8U-Eh-LmB">
+                                                    <rect key="frame" x="5" y="2" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="A0A-qd-qWW"/>
+                                                        <constraint firstAttribute="width" secondItem="Y8U-Eh-LmB" secondAttribute="height" multiplier="1:1" id="c9Y-O1-q0A"/>
+                                                        <constraint firstAttribute="height" constant="80" id="iPL-km-hYk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvB-Ix-hir">
+                                                    <rect key="frame" x="87" y="2" width="250" height="42.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y8U-Eh-LmB" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="025-WH-idX"/>
+                                                <constraint firstItem="WvB-Ix-hir" firstAttribute="width" secondItem="Y8U-Eh-LmB" secondAttribute="height" multiplier="25:8" id="8yp-OH-ler"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="32" id="Enm-yf-Jc2"/>
+                                                <constraint firstAttribute="trailing" secondItem="WvB-Ix-hir" secondAttribute="trailing" constant="5" id="Wtl-gL-v90"/>
+                                                <constraint firstItem="Y8U-Eh-LmB" firstAttribute="leading" secondItem="I9o-8P-IYB" secondAttribute="leading" constant="5" id="cAm-eK-rxd"/>
+                                                <constraint firstItem="WvB-Ix-hir" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="pDC-fl-sTl"/>
+                                                <constraint firstItem="WvB-Ix-hir" firstAttribute="leading" secondItem="Y8U-Eh-LmB" secondAttribute="trailing" constant="2" id="suR-ww-q0D"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y8U-Eh-LmB" secondAttribute="bottom" constant="5" id="xIR-gt-4YC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="title" destination="TVD-tl-8Fn" id="cTU-75-Ksn"/>
+                                            <outlet property="imgVideo" destination="Y8U-Eh-LmB" id="639-Qp-d4A"/>
+                                            <outlet property="titleTextView" destination="WvB-Ix-hir" id="ZK3-Yj-nYH"/>
                                             <segue destination="Fub-jE-fuO" kind="show" identifier="detailIdentifier" id="ALv-NP-TPw"/>
                                         </connections>
                                     </tableViewCell>
@@ -60,7 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Th-dQ-7ah"/>
+                    <navigationItem key="navigationItem" title="LifeSpeak Video List" id="9Th-dQ-7ah"/>
                     <connections>
                         <outlet property="tableView" destination="hn7-f0-8Ob" id="Wob-HV-261"/>
                     </connections>

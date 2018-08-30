@@ -12,6 +12,7 @@ protocol VideoContentManagerProtocol {
     func getVideo(fromVideoArray index : Int) throws ->VideoContent
     func getVideoContentsCount()->Int
     func loadVideos()
+    func loadVideoImage(imageURLOpt: String?, imageLoaded: @escaping (Data?, HTTPURLResponse?, Error?)->Void)
     func getNextVideo(currentVideo: VideoContent?) throws ->VideoContent?
     func getPrevVideo(currentVideo: VideoContent?) throws ->VideoContent?
 }

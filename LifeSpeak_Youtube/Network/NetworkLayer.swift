@@ -13,12 +13,21 @@ import SwiftyXMLParser
 protocol NetworkProtocol {
     static func getInstance() -> NetworkProtocol
     func loadFromNetwork(finished: @escaping (_ xmlData: XML.Accessor?, _ errorMsg: String?)  -> ())
+    func setThumbnailImage(forVideoImage videoImageURL : String, imageLoaded : @escaping (Data?, HTTPURLResponse?, Error?)->Void) 
+    
 }
 
 class NetworkModel: NetworkProtocol{
     
     private var youtubeOptId : String?
     private static var instance: NetworkProtocol?
+    
+    var session: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 10.0
+        let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: nil)
+        return session
+    }()
     
     init()
     {
@@ -61,7 +70,6 @@ extension NetworkModel{
         if let url = URL(string: youtubeChannelURL) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
-           // urlRequest.addValue(myKey, forHTTPHeaderField: "Authorization")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
             Alamofire.request(youtubeChannelURL)
@@ -77,6 +85,37 @@ extension NetworkModel{
                     }
             }
 
+        }
+    }
+}
+
+extension NetworkModel{
+    
+    func setThumbnailImage(forVideoImage videoImageURL : String, imageLoaded : @escaping (Data?, HTTPURLResponse?, Error?)->Void) {
+        
+        if let _ = URL(string: videoImageURL)
+        {
+            let videoImageURL = URL(string: videoImageURL)!
+            let downloadPicTask = session.dataTask(with: videoImageURL) { (data, responseOpt, error) in
+                if let e = error {
+                    print("Error downloading cat picture: \(e)")
+                }
+                else {
+                    if let response = responseOpt as? HTTPURLResponse {
+                        
+                        if let imageData = data {
+                            imageLoaded(imageData, response, error)
+                        }
+                        else {
+                            imageLoaded(nil, response, error)
+                        }
+                    }
+                    else {
+                        imageLoaded(nil, nil, error)
+                    }
+                }
+            }
+            downloadPicTask.resume()
         }
     }
 }

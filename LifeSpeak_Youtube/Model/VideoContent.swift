@@ -77,11 +77,35 @@ extension VideoContentManager{
                 video.title = content["title"].text
                 video.id = content["id"].text
                 video.videoURL = content["link"].attributes["href"]
+                video.imageURL = content["media:group","media:thumbnail"].attributes["url"]
                 self?.videoContents.append(video)
             }
             
             NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Messages.videoContentArrived), object: self))
         })
+    }
+}
+
+extension VideoContentManager{
+    
+    func loadVideoImage(imageURLOpt: String?, imageLoaded: @escaping (Data?, HTTPURLResponse?, Error?)->Void){
+        
+        guard let imageURL = imageURLOpt else{
+            print("Image URL was empty")
+            return
+        }
+      
+        networkModel.setThumbnailImage(forVideoImage: imageURL, imageLoaded: {(dataOpt, responseOpt, errorOpt) in
+            
+            guard let data = dataOpt,
+                let response = responseOpt else{
+                    print("Image didn't load") // Not crashing the application just because the image was not available
+                    return
+            }
+            
+            imageLoaded(data, response, errorOpt)
+        })
+       
     }
 }
 class VideoContent: Equatable {
@@ -90,17 +114,6 @@ class VideoContent: Equatable {
     var author: String?
     var videoURL: String?
     var imageURL: String?
-    
-//    init(_id: String, _title: String, _author: String, _videoURL: String, _imageURL: String) {
-//        id = _id
-//        title = _title
-//        author = _author
-//        videoURL = _videoURL
-//        imageURL = _imageURL
-//    }
-    
-   
-    
 }
 
 func ==(lhs: VideoContent, rhs: VideoContent) -> Bool {

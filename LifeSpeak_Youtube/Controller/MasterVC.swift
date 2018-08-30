@@ -50,7 +50,49 @@ extension MasterVC : UITableViewDataSource{
         guard let videoContent = videoContentOpt else{
             preconditionFailure("Video content not available")
         }
-        cell.title.text = videoContent.title
+        cell.titleTextView.text = videoContent.title
+        
+        if(!(videoContent.imageURL ?? "").isEmpty){
+            videoManager.loadVideoImage(imageURLOpt: videoContent.imageURL, imageLoaded: ({(data, response, error) in
+                
+                OperationQueue.main.addOperation {
+                    if let e = error {
+                        print("HTTP request failed: \(e.localizedDescription)")
+                    }
+                    else{
+                        if let httpResponse = response {
+                            print("http response code: \(httpResponse.statusCode)")
+                            
+                            let HTTP_OK = 200
+                            if(httpResponse.statusCode == HTTP_OK ){
+                                
+                                if let imageData = data{
+                                    print("urlArrivedCallback operation: Now on thread: \(Thread.current)")
+                                    cell.imgVideo.image = UIImage(data: imageData)
+                                }
+                                else{
+                                    cell.imgVideo.image = nil
+                                    print("Image data not available")
+                                }
+                            }
+                            else{
+                                cell.imgVideo.image = nil
+                                print("HTTP Error \(httpResponse.statusCode)")
+                            }
+                        }
+                        else{
+                            cell.imgVideo.image = nil
+                            print("Can't parse imageresponse")
+                        }
+                    }
+                }
+            })
+            )
+        }
+        else{
+            cell.imgVideo.image = nil
+        }
+        
         return cell
     }
     
