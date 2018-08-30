@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,18 +39,25 @@
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvB-Ix-hir">
-                                                    <rect key="frame" x="87" y="2" width="250" height="42.5"/>
+                                                    <rect key="frame" x="87" y="2" width="250" height="46.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzE-0H-IfU">
+                                                    <rect key="frame" x="87" y="50.5" width="96" height="26"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Y8U-Eh-LmB" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="025-WH-idX"/>
-                                                <constraint firstItem="WvB-Ix-hir" firstAttribute="width" secondItem="Y8U-Eh-LmB" secondAttribute="height" multiplier="25:8" id="8yp-OH-ler"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="32" id="Enm-yf-Jc2"/>
+                                                <constraint firstItem="yzE-0H-IfU" firstAttribute="leading" secondItem="Y8U-Eh-LmB" secondAttribute="trailing" constant="2" id="H7s-Ww-hA1"/>
+                                                <constraint firstAttribute="bottom" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="38.5" id="Jzt-AX-QwD"/>
+                                                <constraint firstItem="WvB-Ix-hir" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="VF5-Mb-zbv"/>
+                                                <constraint firstAttribute="bottom" secondItem="yzE-0H-IfU" secondAttribute="bottom" constant="10.5" id="Wop-xF-aCh"/>
                                                 <constraint firstAttribute="trailing" secondItem="WvB-Ix-hir" secondAttribute="trailing" constant="5" id="Wtl-gL-v90"/>
+                                                <constraint firstItem="yzE-0H-IfU" firstAttribute="top" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="2" id="bqf-Da-rzy"/>
+                                                <constraint firstAttribute="trailing" secondItem="yzE-0H-IfU" secondAttribute="trailing" constant="159" id="c89-5v-8Ng"/>
                                                 <constraint firstItem="Y8U-Eh-LmB" firstAttribute="leading" secondItem="I9o-8P-IYB" secondAttribute="leading" constant="5" id="cAm-eK-rxd"/>
                                                 <constraint firstItem="WvB-Ix-hir" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="pDC-fl-sTl"/>
                                                 <constraint firstItem="WvB-Ix-hir" firstAttribute="leading" secondItem="Y8U-Eh-LmB" secondAttribute="trailing" constant="2" id="suR-ww-q0D"/>
@@ -59,6 +65,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imgRating" destination="yzE-0H-IfU" id="agF-Cf-kdm"/>
                                             <outlet property="imgVideo" destination="Y8U-Eh-LmB" id="639-Qp-d4A"/>
                                             <outlet property="titleTextView" destination="WvB-Ix-hir" id="ZK3-Yj-nYH"/>
                                             <segue destination="Fub-jE-fuO" kind="show" identifier="detailIdentifier" id="ALv-NP-TPw"/>

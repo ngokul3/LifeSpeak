@@ -78,6 +78,8 @@ extension VideoContentManager{
                 video.id = content["id"].text
                 video.videoURL = content["link"].attributes["href"]
                 video.imageURL = content["media:group","media:thumbnail"].attributes["url"]
+                let givenRating = content["media:group","media:community","media:starRating"].attributes["average"] ?? "0"
+                video.rating = (givenRating as NSString).integerValue
                 self?.videoContents.append(video)
             }
             
@@ -99,7 +101,7 @@ extension VideoContentManager{
             
             guard let data = dataOpt,
                 let response = responseOpt else{
-                    print("Image didn't load") // Not crashing the application just because the image was not available
+                    print("Image didn't load")
                     return
             }
             
@@ -114,6 +116,17 @@ class VideoContent: Equatable {
     var author: String?
     var videoURL: String?
     var imageURL: String?
+    var rating: Int?
+    
+    var ratingImageName: String?{
+        if let videoRating = rating{
+            return "\(videoRating)Stars"
+        }
+        else{
+            return nil
+        }
+    }
+    
 }
 
 func ==(lhs: VideoContent, rhs: VideoContent) -> Bool {

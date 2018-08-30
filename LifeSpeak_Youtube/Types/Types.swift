@@ -27,6 +27,8 @@ enum NavigationMode{
 }
 struct Consts {
     static let YOUTUBEURL = "https://www.youtube.com/feeds/videos.xml?channel_id="
+    static let MinRatingToDisplayImage = 0
+    static let MaxRatingToDisplayImage = 5
 }
 
 struct Messages {

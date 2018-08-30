@@ -9,9 +9,10 @@
 import UIKit
 
 class VideoCell: UITableViewCell {
-
-
+ 
+    @IBOutlet weak var imgRating: UIImageView!
     @IBOutlet weak var imgVideo: UIImageView!
     @IBOutlet weak var titleTextView: UITextView!
-    @IBOutlet weak var title: UILabel!
+
+    
 }
