@@ -16,7 +16,8 @@ class DetailVC: UIViewController {
     @IBOutlet weak var videoTitle: UILabel!
     
     public var videoContentOpt: VideoContent?
-    public var videoFromIndexOpt : Int?
+    public var delegate : VideoNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         playVideo()
@@ -31,8 +32,6 @@ extension DetailVC{
             preconditionFailure("There is no URL to play")
         }
         
-        
-        
         guard let url = URL(string: videoContent.videoURL ?? "") //todo
         
         else{
@@ -46,8 +45,12 @@ extension DetailVC{
 
 extension DetailVC{
     @IBAction func btnNextClick(_ sender: UIButton) {
+        videoContentOpt = delegate?.navigateToAnotherVideo(currentVideo: self.videoContentOpt, navigationMode: .next)
+        playVideo()
     }
     @IBAction func btnPrevClick(_ sender: UIButton) {
+        videoContentOpt = delegate?.navigateToAnotherVideo(currentVideo: self.videoContentOpt, navigationMode: .prev)
+        playVideo()
     }
     
 }

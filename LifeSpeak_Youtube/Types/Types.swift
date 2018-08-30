@@ -12,10 +12,12 @@ protocol VideoContentManagerProtocol {
     func getVideo(fromVideoArray index : Int) throws ->VideoContent
     func getVideoContentsCount()->Int
     func loadVideos()
+    func getNextVideo(currentVideo: VideoContent?) throws ->VideoContent?
+    func getPrevVideo(currentVideo: VideoContent?) throws ->VideoContent?
 }
 
 protocol VideoNavigationDelegate{
-    func navigateToAnotherVideo(currentVideoIndex: Int, navigationMode: NavigationMode )
+    func navigateToAnotherVideo(currentVideo: VideoContent?, navigationMode: NavigationMode )-> VideoContent?
 }
 
 enum NavigationMode{

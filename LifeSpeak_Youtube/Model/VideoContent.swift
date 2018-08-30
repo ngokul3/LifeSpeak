@@ -32,6 +32,36 @@ extension VideoContentManager : VideoContentManagerProtocol{
     func getVideoContentsCount()->Int{
         return videoContents.count
     }
+    
+    func getNextVideo(currentVideo: VideoContent?) throws ->VideoContent?{
+        let indexNumOpt = videoContents.index(where: {$0 == currentVideo})
+        
+        guard let indexNum = indexNumOpt else{
+            preconditionFailure("Index is nil")
+        }
+        
+        if(indexNum == videoContents.count - 1){
+            return try getVideo(fromVideoArray: 0)
+        }
+        else{
+            return try getVideo(fromVideoArray: indexNum + 1)
+        }
+    }
+    
+    func getPrevVideo(currentVideo: VideoContent?) throws ->VideoContent?{
+        let indexNumOpt = videoContents.index(where: {$0 == currentVideo})
+        
+        guard let indexNum = indexNumOpt else{
+            preconditionFailure("Index is nil")
+        }
+        
+        if(indexNum == 0){
+            return try getVideo(fromVideoArray: videoContents.count - 1)
+        }
+        else{
+            return try getVideo(fromVideoArray: indexNum - 1)
+        }
+    }
 }
 
 extension VideoContentManager{
@@ -54,7 +84,7 @@ extension VideoContentManager{
         })
     }
 }
-class VideoContent{
+class VideoContent: Equatable {
     var id: String?
     var title: String?
     var author: String?
@@ -68,6 +98,14 @@ class VideoContent{
 //        videoURL = _videoURL
 //        imageURL = _imageURL
 //    }
+    
+   
+    
+}
+
+func ==(lhs: VideoContent, rhs: VideoContent) -> Bool {
+    return lhs.id == rhs.id
+   
 }
 
 extension Collection where Indices.Iterator.Element == Index {
