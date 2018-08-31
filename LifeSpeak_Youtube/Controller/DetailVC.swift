@@ -13,7 +13,7 @@ import YouTubePlayer_Swift
 class DetailVC: UIViewController {
     
     @IBOutlet var videoPlayer: YouTubePlayerView!
-    @IBOutlet weak var videoTitle: UILabel!
+    @IBOutlet weak var videoTextTitle: UITextView!
     
     public var videoContentOpt: VideoContent?
     public var delegate : VideoNavigationDelegate?
@@ -36,7 +36,7 @@ extension DetailVC{
             preconditionFailure("Invalid URL")
         }
         
-        videoTitle.text = videoContent.title
+        videoTextTitle.text = videoContent.title
     //    self.navigationItem.title = videoContent.title
 
         videoPlayer.loadVideoURL(url)

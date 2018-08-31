@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List-->
+        <!--Video List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MasterVC" customModule="LifeSpeak_Youtube" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8U-Eh-LmB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8U-Eh-LmB">
                                                     <rect key="frame" x="5" y="2" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="A0A-qd-qWW"/>
@@ -46,19 +46,19 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzE-0H-IfU">
-                                                    <rect key="frame" x="87" y="50.5" width="96" height="26"/>
+                                                    <rect key="frame" x="87" y="53.5" width="93.5" height="28.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Y8U-Eh-LmB" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="025-WH-idX"/>
+                                                <constraint firstItem="yzE-0H-IfU" firstAttribute="bottom" secondItem="Y8U-Eh-LmB" secondAttribute="bottom" id="9DW-Ea-mX7"/>
                                                 <constraint firstItem="yzE-0H-IfU" firstAttribute="leading" secondItem="Y8U-Eh-LmB" secondAttribute="trailing" constant="2" id="H7s-Ww-hA1"/>
                                                 <constraint firstAttribute="bottom" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="38.5" id="Jzt-AX-QwD"/>
                                                 <constraint firstItem="WvB-Ix-hir" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="VF5-Mb-zbv"/>
-                                                <constraint firstAttribute="bottom" secondItem="yzE-0H-IfU" secondAttribute="bottom" constant="10.5" id="Wop-xF-aCh"/>
                                                 <constraint firstAttribute="trailing" secondItem="WvB-Ix-hir" secondAttribute="trailing" constant="5" id="Wtl-gL-v90"/>
-                                                <constraint firstItem="yzE-0H-IfU" firstAttribute="top" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="2" id="bqf-Da-rzy"/>
-                                                <constraint firstAttribute="trailing" secondItem="yzE-0H-IfU" secondAttribute="trailing" constant="159" id="c89-5v-8Ng"/>
+                                                <constraint firstItem="yzE-0H-IfU" firstAttribute="top" secondItem="WvB-Ix-hir" secondAttribute="bottom" constant="5" id="bqf-Da-rzy"/>
                                                 <constraint firstItem="Y8U-Eh-LmB" firstAttribute="leading" secondItem="I9o-8P-IYB" secondAttribute="leading" constant="5" id="cAm-eK-rxd"/>
+                                                <constraint firstItem="yzE-0H-IfU" firstAttribute="width" secondItem="I9o-8P-IYB" secondAttribute="height" multiplier="96:89" id="oj7-J3-eqw"/>
                                                 <constraint firstItem="WvB-Ix-hir" firstAttribute="top" secondItem="I9o-8P-IYB" secondAttribute="top" constant="2" id="pDC-fl-sTl"/>
                                                 <constraint firstItem="WvB-Ix-hir" firstAttribute="leading" secondItem="Y8U-Eh-LmB" secondAttribute="trailing" constant="2" id="suR-ww-q0D"/>
                                                 <constraint firstAttribute="bottom" secondItem="Y8U-Eh-LmB" secondAttribute="bottom" constant="5" id="xIR-gt-4YC"/>
@@ -98,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="List" id="9Th-dQ-7ah"/>
+                    <navigationItem key="navigationItem" title="Video List" id="9Th-dQ-7ah"/>
                     <connections>
                         <outlet property="searchBar" destination="ygb-iQ-Ks1" id="0bk-mC-9AX"/>
                         <outlet property="tableView" destination="hn7-f0-8Ob" id="Wob-HV-261"/>
@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="2018.4000000000001" y="133.5832083958021"/>
         </scene>
-        <!--Title-->
+        <!--Video-->
         <scene sceneID="Ord-WL-7vD">
             <objects>
                 <viewController id="Fub-jE-fuO" customClass="DetailVC" customModule="LifeSpeak_Youtube" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,18 +117,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWb-WO-jBQ" customClass="YouTubePlayerView" customModule="YouTubePlayer_Swift">
-                                <rect key="frame" x="0.0" y="64" width="375" height="318"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="476"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="qWb-WO-jBQ" secondAttribute="height" multiplier="125:106" id="awO-vz-8K1"/>
+                                    <constraint firstAttribute="width" secondItem="qWb-WO-jBQ" secondAttribute="height" multiplier="375:476" id="VxF-iq-0iL"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stJ-fx-IWp">
-                                <rect key="frame" x="10" y="411" width="140.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTm-YY-y8P">
                                 <rect key="frame" x="10" y="617" width="32" height="30"/>
                                 <constraints>
@@ -149,25 +143,33 @@
                                     <action selector="btnPrevClick:" destination="Fub-jE-fuO" eventType="touchUpInside" id="2kc-4b-j4n"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EsD-fk-M7w">
+                                <rect key="frame" x="10" y="548" width="355" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="stJ-fx-IWp" firstAttribute="top" secondItem="qWb-WO-jBQ" secondAttribute="bottom" constant="29" id="A2i-ZD-E3c"/>
+                            <constraint firstItem="EsD-fk-M7w" firstAttribute="top" secondItem="qWb-WO-jBQ" secondAttribute="bottom" constant="8" id="1jO-P3-NFm"/>
+                            <constraint firstItem="EsD-fk-M7w" firstAttribute="leading" secondItem="2BM-zw-5I4" secondAttribute="leading" constant="10" id="8x6-V1-0kt"/>
                             <constraint firstItem="qWb-WO-jBQ" firstAttribute="leading" secondItem="FDa-dW-oPc" secondAttribute="leading" id="Fzd-c6-7Kw"/>
                             <constraint firstItem="Xoz-Ku-KLc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FDa-dW-oPc" secondAttribute="leading" constant="20" symbolic="YES" id="GJP-cJ-i0g"/>
                             <constraint firstItem="2BM-zw-5I4" firstAttribute="bottom" secondItem="Xoz-Ku-KLc" secondAttribute="bottom" constant="20" id="GfX-ge-Rz6"/>
                             <constraint firstItem="2BM-zw-5I4" firstAttribute="bottom" secondItem="bTm-YY-y8P" secondAttribute="bottom" constant="20" id="UDS-yl-jHh"/>
                             <constraint firstAttribute="trailing" secondItem="qWb-WO-jBQ" secondAttribute="trailing" id="Wkl-u4-WoT"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="stJ-fx-IWp" secondAttribute="trailing" constant="20" symbolic="YES" id="bqO-eF-I3j"/>
                             <constraint firstItem="qWb-WO-jBQ" firstAttribute="top" secondItem="2BM-zw-5I4" secondAttribute="top" id="dxe-hb-pNP"/>
                             <constraint firstItem="2BM-zw-5I4" firstAttribute="trailing" secondItem="Xoz-Ku-KLc" secondAttribute="trailing" constant="10" id="fl6-db-XEb"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bTm-YY-y8P" secondAttribute="trailing" constant="20" symbolic="YES" id="gto-yE-1WX"/>
-                            <constraint firstItem="stJ-fx-IWp" firstAttribute="leading" secondItem="2BM-zw-5I4" secondAttribute="leading" constant="10" id="gxP-Vl-r6C"/>
+                            <constraint firstItem="bTm-YY-y8P" firstAttribute="top" secondItem="EsD-fk-M7w" secondAttribute="bottom" constant="8" id="nbN-Im-4NM"/>
+                            <constraint firstItem="2BM-zw-5I4" firstAttribute="trailing" secondItem="EsD-fk-M7w" secondAttribute="trailing" constant="10" id="tyj-iQ-wj4"/>
                             <constraint firstItem="bTm-YY-y8P" firstAttribute="leading" secondItem="2BM-zw-5I4" secondAttribute="leading" constant="10" id="yND-Gb-BOX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BM-zw-5I4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="pq2-fh-kRd">
+                    <navigationItem key="navigationItem" title="Video" id="pq2-fh-kRd">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="yBP-NE-HWC">
                             <connections>
                                 <action selector="btnBackClick:" destination="Fub-jE-fuO" id="e6d-p0-8A6"/>
@@ -176,12 +178,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="videoPlayer" destination="qWb-WO-jBQ" id="Qdw-Vm-8Vf"/>
-                        <outlet property="videoTitle" destination="stJ-fx-IWp" id="QQL-Fi-DLK"/>
+                        <outlet property="videoTextTitle" destination="EsD-fk-M7w" id="uCH-1e-mFE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79S-Ei-Ciu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2743.1999999999998" y="137.18140929535232"/>
+            <point key="canvasLocation" x="2742.5" y="136.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TGS-K0-UxZ">
