@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zv2-nG-8c5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZZ2-Jl-I11">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Video List-->
+        <!--List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MasterVC" customModule="LifeSpeak_Youtube" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Video List" id="9Th-dQ-7ah"/>
+                    <navigationItem key="navigationItem" title="List" id="9Th-dQ-7ah"/>
                     <connections>
                         <outlet property="searchBar" destination="ygb-iQ-Ks1" id="0bk-mC-9AX"/>
                         <outlet property="tableView" destination="hn7-f0-8Ob" id="Wob-HV-261"/>
@@ -106,9 +106,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2018.4000000000001" y="133.5832083958021"/>
         </scene>
-        <!--DetailVC-->
+        <!--Title-->
         <scene sceneID="Ord-WL-7vD">
             <objects>
                 <viewController id="Fub-jE-fuO" customClass="DetailVC" customModule="LifeSpeak_Youtube" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,6 +167,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2BM-zw-5I4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="pq2-fh-kRd">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="yBP-NE-HWC">
+                            <connections>
+                                <action selector="btnBackClick:" destination="Fub-jE-fuO" id="e6d-p0-8A6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="videoPlayer" destination="qWb-WO-jBQ" id="Qdw-Vm-8Vf"/>
                         <outlet property="videoTitle" destination="stJ-fx-IWp" id="QQL-Fi-DLK"/>
@@ -174,25 +181,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79S-Ei-Ciu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="137.18140929535232"/>
+            <point key="canvasLocation" x="2743.1999999999998" y="137.18140929535232"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Wrq-up-BtQ">
+        <scene sceneID="TGS-K0-UxZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zv2-nG-8c5" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZZ2-Jl-I11" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NQw-RY-gJS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1SD-Bn-Zkg">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F5i-0Z-T9V"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lnU-63-OXr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bb-Bi-vKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgf-VB-yeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

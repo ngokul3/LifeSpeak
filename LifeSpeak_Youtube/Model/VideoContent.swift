@@ -82,6 +82,16 @@ extension VideoContentManager : VideoContentManagerProtocol{
             return try getVideo(fromVideoArray: indexNum - 1)
         }
     }
+    
+    func getVideoContentIndex(videoContent: VideoContent)->Int{
+        let indexNumOpt = filteredVideos.index(where: {$0 == videoContent})
+        
+        guard let indexNum = indexNumOpt else{
+            preconditionFailure("Index is nil")
+        }
+        
+        return indexNum
+    }
 }
 
 extension VideoContentManager{

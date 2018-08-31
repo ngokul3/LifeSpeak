@@ -140,14 +140,22 @@ extension MasterVC{
 extension MasterVC: VideoNavigationDelegate{
     func navigateToAnotherVideo(currentVideo: VideoContent?, navigationMode: NavigationMode)->VideoContent? {
         do{
+            let navigatedVideo: VideoContent?
             switch navigationMode{
             case .next:
-                let nextVideo = try videoManager.getNextVideo(currentVideo: currentVideo)
-                return nextVideo
+                navigatedVideo = try videoManager.getNextVideo(currentVideo: currentVideo)
             case .prev:
-                let prevVideo = try videoManager.getPrevVideo(currentVideo: currentVideo)
-                return prevVideo
+                navigatedVideo = try videoManager.getPrevVideo(currentVideo: currentVideo)
             }
+            
+            if let video = navigatedVideo{
+                let videoIndexRow = videoManager.getVideoContentIndex(videoContent: video)
+                let indexPath = IndexPath(row: videoIndexRow, section: 0)
+                
+                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.middle)
+            }
+            
+            return navigatedVideo
 
         }
         catch{

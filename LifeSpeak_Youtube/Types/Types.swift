@@ -15,7 +15,8 @@ protocol VideoContentManagerProtocol {
     func loadVideoImage(imageURLOpt: String?, imageLoaded: @escaping (Data?, HTTPURLResponse?, Error?)->Void)
     func getNextVideo(currentVideo: VideoContent?) throws ->VideoContent?
     func getPrevVideo(currentVideo: VideoContent?) throws ->VideoContent?
-     var currentFilter : String {get set}
+    var currentFilter : String {get set}
+    func getVideoContentIndex(videoContent: VideoContent)->Int
 }
 
 protocol VideoNavigationDelegate{
