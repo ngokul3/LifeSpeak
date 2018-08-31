@@ -15,6 +15,7 @@ protocol VideoContentManagerProtocol {
     func loadVideoImage(imageURLOpt: String?, imageLoaded: @escaping (Data?, HTTPURLResponse?, Error?)->Void)
     func getNextVideo(currentVideo: VideoContent?) throws ->VideoContent?
     func getPrevVideo(currentVideo: VideoContent?) throws ->VideoContent?
+     var currentFilter : String {get set}
 }
 
 protocol VideoNavigationDelegate{
@@ -32,7 +33,7 @@ struct Consts {
 }
 
 struct Messages {
-    static let videoContentArrived = "Video list from Network"
+    static let videoContentAvailable = "Video list from Network"
     
 }
 

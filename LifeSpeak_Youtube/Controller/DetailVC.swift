@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import AVKit
+import AVFoundation
 import YouTubePlayer_Swift
 
 class DetailVC: UIViewController {

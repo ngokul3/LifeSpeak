@@ -11,11 +11,27 @@ typealias VideoArray = [VideoContent]
 
 class VideoContentManager{
     
-   // private static var instance: VideoContentProtocol?
     private var videoContents = VideoArray()
     private lazy var networkModel = {
         return AppDel.networkModel
     }()
+    
+    var filteredVideos = VideoArray()
+    
+    
+    var currentFilter : String = ""{
+        didSet{
+            
+            if(!currentFilter.isEmpty){
+                filterVideoList(videoFilter: currentFilter)
+            }
+            else{
+                videoContents = filteredVideos
+            }
+            
+            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Messages.videoContentAvailable), object: self))
+        }
+    }
 }
 
 extension VideoContentManager : VideoContentManagerProtocol{
@@ -83,12 +99,9 @@ extension VideoContentManager{
                 self?.videoContents.append(video)
             }
             
-            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Messages.videoContentArrived), object: self))
+            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Messages.videoContentAvailable), object: self))
         })
     }
-}
-
-extension VideoContentManager{
     
     func loadVideoImage(imageURLOpt: String?, imageLoaded: @escaping (Data?, HTTPURLResponse?, Error?)->Void){
         
@@ -96,7 +109,7 @@ extension VideoContentManager{
             print("Image URL was empty")
             return
         }
-      
+        
         networkModel.setThumbnailImage(forVideoImage: imageURL, imageLoaded: {(dataOpt, responseOpt, errorOpt) in
             
             guard let data = dataOpt,
@@ -107,7 +120,20 @@ extension VideoContentManager{
             
             imageLoaded(data, response, errorOpt)
         })
-       
+        
+    }
+}
+
+extension VideoContentManager{
+    func filterVideoList(videoFilter: String){
+        guard videoContents.count > 0 else {
+            preconditionFailure("Not able to filter videos as there are none")
+        }
+        
+        filteredVideos =  videoContents.filter({(arg1) in
+            let title = arg1.title ?? ""
+            return title.lowercased().contains(videoFilter.lowercased())
+        })
     }
 }
 class VideoContent: Equatable {

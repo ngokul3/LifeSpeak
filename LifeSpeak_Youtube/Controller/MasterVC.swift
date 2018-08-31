@@ -10,17 +10,17 @@ import UIKit
 
 class MasterVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+
     private var videoManager = AppDel.videoManager
     private static var modelObserver: NSObjectProtocol?
     
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         videoManager.loadVideos()
-       // self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-        MasterVC.modelObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue:   Messages.videoContentArrived), object: nil, queue: OperationQueue.main) {
+        MasterVC.modelObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue:   Messages.videoContentAvailable), object: nil, queue: OperationQueue.main) {
             [weak self] (notification: Notification) in
             
             if let s = self {
@@ -53,25 +53,9 @@ extension MasterVC : UITableViewDataSource{
             preconditionFailure("Video content not available")
         }
         cell.titleTextView.text = videoContent.title
-       // let imgStarArr = [cell.imgStar1, cell.imgStar2, cell.imgStar3, cell.imgStar4, cell.imgStar5]
-      //  let rating = videoContent.rating ?? 0
         let ratingImageName = videoContent.ratingImageName ?? ""
         cell.imgRating.image = UIImage(named: ratingImageName)
-//        imgStarArr.forEach({(img) in
-//
-//            guard let imgIndex = imgStarArr.index(of: img) else{
-//                preconditionFailure("Can't load images")
-//            }
-//
-//            if (rating > imgIndex){
-//                img?.image = UIImage(named: "rating")
-//                print(UIImage(named: "rating"))
-//            }
-//            else{
-//                img?.image = UIImage(named: "plainStar")
-//            }
-//        })
-//
+
         if(!(videoContent.imageURL ?? "").isEmpty){
             videoManager.loadVideoImage(imageURLOpt: videoContent.imageURL, imageLoaded: ({(data, response, error) in
                 
@@ -151,11 +135,7 @@ extension MasterVC{
         }
     }
 }
-extension MasterVC{
-    func updateUI(){
-        self.tableView.reloadData()
-    }
-}
+
 
 extension MasterVC: VideoNavigationDelegate{
     func navigateToAnotherVideo(currentVideo: VideoContent?, navigationMode: NavigationMode)->VideoContent? {
@@ -175,8 +155,29 @@ extension MasterVC: VideoNavigationDelegate{
             return nil
         }
     }
+}
+
+extension MasterVC: UISearchBarDelegate{
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if(videoManager.currentFilter != searchText){
+            videoManager.currentFilter = searchText
+        }
+    }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
+
+extension MasterVC{
+    func updateUI(){
+        self.tableView.reloadData()
+    }
 }
 
 extension MasterVC{

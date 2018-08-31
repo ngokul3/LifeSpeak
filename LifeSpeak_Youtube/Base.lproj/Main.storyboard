@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LifeSpeak Video List-->
+        <!--Video List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MasterVC" customModule="LifeSpeak_Youtube" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-f0-8Ob">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="videoCell" rowHeight="90" id="CPE-UD-DKe" customClass="VideoCell" customModule="LifeSpeak_Youtube" customModuleProvider="target">
@@ -41,7 +41,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvB-Ix-hir">
                                                     <rect key="frame" x="87" y="2" width="250" height="46.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -77,18 +77,30 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="kck-aN-tge"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-iQ-Ks1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jIP-kr-lsY"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hn7-f0-8Ob" firstAttribute="top" secondItem="ygb-iQ-Ks1" secondAttribute="bottom" id="132-60-tlI"/>
+                            <constraint firstItem="ygb-iQ-Ks1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5vZ-2G-LNy"/>
                             <constraint firstItem="hn7-f0-8Ob" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mhu-zE-uYZ"/>
-                            <constraint firstItem="hn7-f0-8Ob" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RPb-Ou-tAY"/>
+                            <constraint firstItem="hn7-f0-8Ob" firstAttribute="top" secondItem="ygb-iQ-Ks1" secondAttribute="bottom" id="OdS-a0-sfi"/>
+                            <constraint firstItem="ygb-iQ-Ks1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UMJ-0u-psm"/>
                             <constraint firstItem="hn7-f0-8Ob" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aOl-eW-xC0"/>
                             <constraint firstItem="hn7-f0-8Ob" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="msK-Hk-fqL"/>
+                            <constraint firstItem="ygb-iQ-Ks1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sML-BF-Og4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LifeSpeak Video List" id="9Th-dQ-7ah"/>
+                    <navigationItem key="navigationItem" title="Video List" id="9Th-dQ-7ah"/>
                     <connections>
+                        <outlet property="searchBar" destination="ygb-iQ-Ks1" id="0bk-mC-9AX"/>
                         <outlet property="tableView" destination="hn7-f0-8Ob" id="Wob-HV-261"/>
                     </connections>
                 </viewController>
