@@ -11,7 +11,11 @@ typealias VideoArray = [VideoContent]
 
 class VideoContentManager{
     
-    private var videoContents = VideoArray()
+    private var videoContents = VideoArray(){
+        didSet{
+            filteredVideos = videoContents
+        }
+    }
     private lazy var networkModel = {
         return AppDel.networkModel
     }()
@@ -26,7 +30,7 @@ class VideoContentManager{
                 filterVideoList(videoFilter: currentFilter)
             }
             else{
-                videoContents = filteredVideos
+                filteredVideos = videoContents
             }
             
             NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Messages.videoContentAvailable), object: self))
@@ -38,7 +42,7 @@ extension VideoContentManager : VideoContentManagerProtocol{
   
     func getVideo(fromVideoArray index : Int) throws ->VideoContent{
         
-        guard let videoContent = videoContents[safe: index]  else{
+        guard let videoContent = filteredVideos[safe: index]  else{
             throw VideoError.invalidRowSelection()
         }
         
@@ -46,17 +50,17 @@ extension VideoContentManager : VideoContentManagerProtocol{
     }
     
     func getVideoContentsCount()->Int{
-        return videoContents.count
+        return filteredVideos.count
     }
     
     func getNextVideo(currentVideo: VideoContent?) throws ->VideoContent?{
-        let indexNumOpt = videoContents.index(where: {$0 == currentVideo})
+        let indexNumOpt = filteredVideos.index(where: {$0 == currentVideo})
         
         guard let indexNum = indexNumOpt else{
             preconditionFailure("Index is nil")
         }
         
-        if(indexNum == videoContents.count - 1){
+        if(indexNum == filteredVideos.count - 1){
             return try getVideo(fromVideoArray: 0)
         }
         else{
@@ -65,14 +69,14 @@ extension VideoContentManager : VideoContentManagerProtocol{
     }
     
     func getPrevVideo(currentVideo: VideoContent?) throws ->VideoContent?{
-        let indexNumOpt = videoContents.index(where: {$0 == currentVideo})
+        let indexNumOpt = filteredVideos.index(where: {$0 == currentVideo})
         
         guard let indexNum = indexNumOpt else{
             preconditionFailure("Index is nil")
         }
         
         if(indexNum == 0){
-            return try getVideo(fromVideoArray: videoContents.count - 1)
+            return try getVideo(fromVideoArray: filteredVideos.count - 1)
         }
         else{
             return try getVideo(fromVideoArray: indexNum - 1)
