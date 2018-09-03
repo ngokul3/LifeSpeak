@@ -7,21 +7,22 @@
 //
 
 import UIKit
-import AVFoundation
+import WebKit
 import YouTubePlayer_Swift
-
 class DetailVC: UIViewController {
     
     @IBOutlet var videoPlayer: YouTubePlayerView!
     @IBOutlet weak var videoTextTitle: UITextView!
+    @IBOutlet weak var webView: WKWebView! // Without YouTubePlayerView
     
     public var videoContentOpt: VideoContent?
     public var delegate : VideoNavigationDelegate?
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+       // playWithWebKit()
         playVideo()
-
     }
 }
 
@@ -37,8 +38,7 @@ extension DetailVC{
         }
         
         videoTextTitle.text = videoContent.title
-    //    self.navigationItem.title = videoContent.title
-
+ 
         videoPlayer.loadVideoURL(url)
     }
 }
@@ -59,6 +59,24 @@ extension DetailVC{
         playVideo()
     }
     
+}
+
+//Can directly do this without additional Pod
+extension DetailVC{
+    
+    func playWithWebKit() {
+        
+        guard let videoContent = videoContentOpt else{
+            preconditionFailure("There is no URL to play")
+        }
+        
+        guard let videoURL = URL(string: videoContent.videoURL ?? "") else{
+            preconditionFailure("Invalid URL")
+        }
+ 
+        let requestObj = URLRequest(url: videoURL)
+        webView.load(requestObj)
+    }
 }
 
 
