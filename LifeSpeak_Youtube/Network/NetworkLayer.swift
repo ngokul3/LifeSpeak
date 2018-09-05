@@ -2,7 +2,7 @@
 //  NetworkLayer.swift
 //  LifeSpeak_Youtube
 //
-//  Created by Gokula K Narasimhan on 8/28/18.
+//  Created by Gokul K Narasimhan on 8/28/18.
 //  Copyright © 2018 Gokul K Narasimhan. All rights reserved.
 //
 
@@ -70,7 +70,6 @@ extension NetworkModel{
         if let url = URL(string: youtubeChannelURL) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
             Alamofire.request(youtubeChannelURL)
                 .responseData { response in
@@ -98,7 +97,7 @@ extension NetworkModel{
             let videoImageURL = URL(string: videoImageURL)!
             let downloadPicTask = session.dataTask(with: videoImageURL) { (data, responseOpt, error) in
                 if let e = error {
-                    print("Error downloading cat picture: \(e)")
+                    print("Error downloading picture: \(e)")
                 }
                 else {
                     if let response = responseOpt as? HTTPURLResponse {

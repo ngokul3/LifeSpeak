@@ -2,7 +2,7 @@
 //  LifeSpeak_YoutubeUITests.swift
 //  LifeSpeak_YoutubeUITests
 //
-//  Created by Gokula K Narasimhan on 8/28/18.
+//  Created by Gokul K Narasimhan on 8/28/18.
 //  Copyright © 2018 Gokul K Narasimhan. All rights reserved.
 //
 

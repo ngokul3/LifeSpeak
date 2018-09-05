@@ -2,7 +2,7 @@
 //  VideoContent.swift
 //  LifeSpeak_Youtube
 //
-//  Created by Gokula K Narasimhan on 8/28/18.
+//  Created by Gokul K Narasimhan on 8/28/18.
 //  Copyright © 2018 Gokul K Narasimhan. All rights reserved.
 //
 
@@ -151,9 +151,8 @@ extension VideoContentManager{
     }
 }
 class VideoContent: Equatable {
-    var id: String?
+    var id: String? // Can be used for later purposes. Caching?
     var title: String?
-    var author: String?
     var videoURL: String?
     var imageURL: String?
     var rating: Int?
